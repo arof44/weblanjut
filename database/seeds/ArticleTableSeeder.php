@@ -11,15 +11,8 @@ class ArticleTableSeeder extends Seeder
      */
     public function run()
     {
-        //factory(App\Article::class, 5)->create();;
-        $faker = Faker::create();
-        foreach (range(0,10) as $i) {
-        	DB::table('articles')->insert ([
-        		//'id' =>$faker->number,
-        		'title' $faker->text(2000),
-        		'content' $faker->text(2000),
-        		'imageurl' $faker->imageurl($widlh=640,$height=480),
-        	]);
-        }
+        //factory(App\Article::class, 5)->create();
+        $this->call(UserTableSeeder::class);
+        $this->call(ArticleTableSeeder::class);
     }
 }

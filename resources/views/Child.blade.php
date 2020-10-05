@@ -1,4 +1,4 @@
-@extends('Layout.Parent')
+@extends('layouts.Master')
 @section('sidebar')
 @parent
 	<p>Side Bar Home</p>
