@@ -12,6 +12,8 @@
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/article', 'Home1Controller@index');
+
 Route::get('/home', 'HomeController@index'); 
 
 Route::get('/about', 'AboutController@index');
@@ -26,3 +28,7 @@ Route::get('/article/{id}', 'ArticleController@index');
 
 //Route::get('/service', 'ServiceController@index');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

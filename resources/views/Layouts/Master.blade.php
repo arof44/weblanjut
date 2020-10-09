@@ -52,28 +52,56 @@
               <a class="dropdown-item" href="{{ url('./article/4') }}">Article 4</a>
               <a class="dropdown-item" href="{{ url('./article/5') }}">Article 5</a>
             </div>
+            @guest
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+            @if (Route::has('register'))
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+            @endif
+            @else
+            <li class="nav-item dropdown">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ Auth::user()->name }} <span class="caret"></span>
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </div>
           </li>
-        </ul>
-      </div>
+          @endguest
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  @yield('content')
+@yield('content')
 
+<!-- /.container -->
+
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+  </div>
   <!-- /.container -->
+</footer>
 
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-    </div>
-    <!-- /.container -->
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 

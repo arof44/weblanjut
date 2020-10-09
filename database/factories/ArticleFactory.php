@@ -1,4 +1,4 @@
-<?php
+u7e<?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
