@@ -31,7 +31,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="{{ url('./') }}">Home
               <span class="sr-only">(current)</span>
             </a>
@@ -41,17 +41,18 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Article
+              Menu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Manage</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{{ url('./article/1') }}">Article 1</a>
-              <a class="dropdown-item" href="{{ url('./article/2') }}">Article 2</a>
-              <a class="dropdown-item" href="{{ url('./article/3') }}">Article 3</a>
-              <a class="dropdown-item" href="{{ url('./article/4') }}">Article 4</a>
-              <a class="dropdown-item" href="{{ url('./article/5') }}">Article 5</a>
+              <a class="dropdown-item" href="{{ url('./manage') }}">Kelola</a>
+              <a class="dropdown-item" href="{{ url('./manage/add') }}">Add</a>
+              <a class="dropdown-item" href="{{ url('./manage') }}">Edit</a>
+              <a class="dropdown-item" href="{{ url('./manage') }}">Hapus</a>
             </div>
+          </li>
+          <li class="nav-item dropdown">
             @guest
             <li class="nav-item">
               <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

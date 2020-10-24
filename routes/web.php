@@ -12,22 +12,31 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/article', 'Home1Controller@index');
-
 Route::get('/home', 'HomeController@index'); 
 
-Route::get('/about', 'AboutController@index');
+Route::get('/article', 'Home1Controller@index');
+
+Route::get('/manage', 'ArticleController@manage')->name('manage');
+
+Route::get('/manage/add','ArticleController@add');
+
+Route::post('/manage/create','ArticleController@create');
+
+Route::get('/manage/edit/{id}','ArticleController@edit');
+
+Route::post('/manage/update/{id}','ArticleController@update');
+
+Route::get('/manage/delete/{id}','ArticleController@delete');
 
 Route::get('/article/{id}', 'ArticleController@index');
 
-//Route::get('/article/1', 'ArticleController@index1');
+Route::get('/about','AboutController@comment');
 
-//Route::get('/article/2', 'ArticleController@index2');
+Route::get('/about/create','AboutController@create');
 
-//Route::get('/article/3', 'ArticleController@index3');
+Route::get('/about/add','AboutController@add');
 
-//Route::get('/service', 'ServiceController@index');
-
+//Route::get('/about', 'AboutController@index');
 
 Auth::routes();
 
