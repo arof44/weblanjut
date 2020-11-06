@@ -21,14 +21,17 @@ class AboutController extends Controller
         return view('about')->with(compact('comment'));
     }
 
-    public function create(Request $request){
+    /**public function create(Request $request){
         Comment::create([
             'name' => $request->name,
             'content' => $request->content,
         ]);
         return redirect('/about');
-    }
+    }**/
     public function add(){
         return view('about');
+    }
+    public function __construct(){
+        $this->middleware('auth');
     }
 }

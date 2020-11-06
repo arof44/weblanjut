@@ -19,5 +19,9 @@ class Home1Controller extends Controller
     });
         $article = Cache::get('article');
         return view('Home1')->with(compact('article'));
+    }
+
+    public function __construct(){
+        $this->middleware('auth');
     }    
 }

@@ -7,7 +7,7 @@
 	<h1 class="my-4" style="margin-bottom: 5%">Kumpuan Artikel</h1>
 </div>
 
-<form action="/manage/update/{{$article->id}}" method="post">
+<form action="/managearticle/update/{{$article->id}}" method="post">
 	{{csrf_field()}}
 	<input type="hidden" name="id" value="{{$article->id}}"></br>
 	<div class="form-group">

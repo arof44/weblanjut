@@ -32,25 +32,34 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('./') }}">Home
+            @can ('user-display')
+            <a class="nav-link" href="{{ url('./home') }}">Home
               <span class="sr-only">(current)</span>
             </a>
+            @endcan
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('./about') }}">About</a>
+            @can ('user-display')
+            <a class="nav-link" href="{{ url('./about') }}">About
+            </a>
+            @endcan
           </li>
           <li class="nav-item dropdown">
+            @can ('manage-articles')
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Menu
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Manage</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="{{ url('./manage') }}">Kelola</a>
-              <a class="dropdown-item" href="{{ url('./manage/add') }}">Add</a>
-              <a class="dropdown-item" href="{{ url('./manage') }}">Edit</a>
-              <a class="dropdown-item" href="{{ url('./manage') }}">Hapus</a>
+              <a class="dropdown-item" href="{{ url('./managearticle') }}">Kelola Aritkel</a>
+              <a class="dropdown-item" href="{{ url('./managearticle/add') }}">Add</a>
+              <a class="dropdown-item" href="{{ url('./managearticle') }}">Edit</a>
+              <a class="dropdown-item" href="{{ url('./managearticle') }}">Hapus</a>
+              <a class="dropdown-item" href="{{ url('./manageuser') }}">Kelola User</a>
+
             </div>
+            @endcan
           </li>
           <li class="nav-item dropdown">
             @guest
