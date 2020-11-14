@@ -28,6 +28,8 @@ Route::post('/managearticle/update/{id}','ManageArticleController@update'); //up
 
 Route::get('/managearticle/delete/{id}','ManageArticleController@delete'); //delete article
 
+Route::get('/managearticle/cetak_pdf', 'ManageArticleController@cetak_pdf'); //cetak PDF
+
 //----------------
 Route::get('/article/{id}', 'ArticleController@index'); //menampilkan article per ID
 
