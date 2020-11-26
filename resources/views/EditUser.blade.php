@@ -7,7 +7,7 @@
 	<h1 class="my-4" style="margin-bottom: 5%">Kumpuan Artikel</h1>
 </div>
 
-<form action="/manageuser/update/{{$user->id}}" method="post">
+<form action="/manageuser/update/{{$user->id}}" method="post" enctype="multipart/form-data">
 	{{csrf_field()}}
 	<input type="hidden" name="id" value="{{$user->id}}"></br>
 	<div class="form-group">
@@ -24,6 +24,11 @@
 			<option value="Administrator" >Admin</option>
 			<option value="User" >User</option>
 		</select>
+	</div>
+	<div class="form-group">
+		<label for="image">Image</label>
+		<input type="file" class="form-control" required="required" name="image" value="{{$user->imageurl}}"></br>
+		<img width="150px" src="{{asset('storage/'.$user->imageurl)}}">
 	</div>
 	<button type="submit" name="edit" class="btn btn-primary float-right">Ubah Data</button>
 </form>

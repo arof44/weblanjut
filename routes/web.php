@@ -33,7 +33,7 @@ Route::get('/managearticle/cetak_pdf', 'ManageArticleController@cetak_pdf'); //c
 //----------------
 Route::get('/article/{id}', 'ArticleController@index'); //menampilkan article per ID
 
-Route::get('/about','AboutController@comment'); //about me
+Route::get('/about','AboutController@comment'); 
 
 Route::get('/about/create','AboutController@create'); //create about
 
@@ -51,6 +51,10 @@ Route::get('/manageuser/edit/{id}','UserController@edit'); //edit user
 Route::post('/manageuser/update/{id}','UserController@update'); //update user
 
 Route::get('/manageuser/delete/{id}','UserController@delete'); //delete user
+
+Route::get('/manageuser/cetak_pdf', 'UserController@cetak_pdf'); //cetak PDF
+
+Route::get('/user', 'UserController@index');
 
 //Route::get('/about', 'AboutController@index');
 

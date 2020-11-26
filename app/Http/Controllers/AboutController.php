@@ -28,9 +28,7 @@ class AboutController extends Controller
         ]);
         return redirect('/about');
     }**/
-    public function add(){
-        return view('about');
-    }
+
     public function __construct(){
         $this->middleware('auth');
     }

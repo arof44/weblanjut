@@ -7,6 +7,7 @@
 	<h1 class="my-4" style="margin-bottom: 5%">Kumpuan User</h1>
 </div>
 <a href="manageuser/add" class="btn btn-secondary btn-lg btn-block">Tambah User</a>
+<a href="manageuser/cetak_pdf" class="btn btn-primary btn-lg btn-block" target="_blank">CETAK PDF USER</a>
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>

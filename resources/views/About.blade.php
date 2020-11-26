@@ -6,7 +6,7 @@
 	<div class="jumbotron jumbotron-fluid mt-5">
 		<div class="container b-5">
 			<img src="https://i.pinimg.com/originals/6e/af/c9/6eafc98c32c9fd43404e7912d7a0e919.jpg" class="float-right">
-			<h1 class="display-4 mb">ABOUT ME</h1>
+			<h1 class="display-4 mb">ABOUT ADMIN</h1>
 			<h1 class="display-4 mb">BIO</h1>
 			<p class="lead">Muhammad Nur Arafah</p>
 			<p class="lead">Bontang, 04 Maret 2001</p>
@@ -28,7 +28,7 @@
 						<label for="title">Comment</label>
 						<textarea class="form-control" rows="3"></textarea>
 					</div>
-					<button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
+					<button type="submit" name="add" class="btn btn-primary float-right">Tambah Komen</button>
 				</form>
 			</div>
 		</div>

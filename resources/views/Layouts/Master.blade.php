@@ -46,9 +46,7 @@
           </li>
           <li class="nav-item dropdown">
             @can ('manage-articles')
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Menu
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">Manage</a>
               <div class="dropdown-divider"></div>
@@ -57,6 +55,7 @@
               <a class="dropdown-item" href="{{ url('./managearticle') }}">Edit</a>
               <a class="dropdown-item" href="{{ url('./managearticle') }}">Hapus</a>
               <a class="dropdown-item" href="{{ url('./manageuser') }}">Kelola User</a>
+              <a class="dropdown-item" href="{{ url('./user') }}">Tampilan User</a>
 
             </div>
             @endcan

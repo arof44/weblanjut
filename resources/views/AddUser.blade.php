@@ -18,7 +18,7 @@
 		<input type="text" class="form-control" required="required" name="email"></br>
 	</div>
 	<div class="form-group">
-		<label for="image">Password</label>
+		<label for="password">Password</label>
 		<input type="password" class="form-control" required="required" name="password"></br>
 	</div>
 	<button type="submit" name="add" class="btn btn-primary float-right">Tambah Data</button>
